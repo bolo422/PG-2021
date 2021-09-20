@@ -18,4 +18,4 @@ EBOs são os indexadores, eles servem para evitar a repetição de dados que ser
 
 
 
-![image](https://user-images.githubusercontent.com/2465857/128772961-04745bc6-ef1d-45b3-9aa7-a623d2af3065.png)
+![image](https://github.com/bolo422/PG-2021/blob/ab5c636525402326e339c7d20f0a67b189079cbb/Lista%201/Imagens/6-a.png)
