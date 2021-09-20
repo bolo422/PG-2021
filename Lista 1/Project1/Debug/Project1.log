@@ -1,0 +1,3 @@
+﻿  Origem.cpp
+C:\Users\crow1\Desktop\Atividades-de-PG-main\HelloTriangle\Project1\Origem.cpp(229,20): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+  Project1.vcxproj -> C:\Users\crow1\Desktop\Atividades-de-PG-main\HelloTriangle\Debug\Project1.exe
