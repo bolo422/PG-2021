@@ -1,0 +1,3 @@
+﻿  Origem.cpp
+C:\Users\fstei\Documents\Listas_PG\Lista02\HelloTriangle\Exercício03\Origem.cpp(32,25): warning C4305: 'inicializando': truncamento de 'double' para 'float'
+  Exercício03.vcxproj -> C:\Users\fstei\Documents\Listas_PG\Lista02\HelloTriangle\Debug\Exercício03.exe

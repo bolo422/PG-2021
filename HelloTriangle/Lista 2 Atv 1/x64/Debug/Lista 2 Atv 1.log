@@ -1,0 +1,2 @@
+﻿  glad.c
+C:\Users\Jonathan  M.B\Desktop\PG2021-2-main\Atividades-de-PG\HelloTriangle\HelloTriangle\glad.c(24,10): fatal error C1083: Não é possível abrir arquivo incluir: 'glad/glad.h': No such file or directory

@@ -1,0 +1,6 @@
+﻿  glad.c
+  Origem.cpp
+C:\Users\Jonathan  M.B\Desktop\PG-2021-LISTA-02-main\Lista 2\HelloTriangle\Exercício04\Origem.cpp(232,20): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+  LINK : C:\Users\Jonathan  M.B\Desktop\PG-2021-LISTA-02-main\Lista 2\HelloTriangle\Debug\Exercício04.exe não encontrado ou não compilado pelo o último link incremental; executando link completo
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflita com uso de outras bibliotecas; use /NODEFAULTLIB:library
+  Exercício04.vcxproj -> C:\Users\Jonathan  M.B\Desktop\PG-2021-LISTA-02-main\Lista 2\HelloTriangle\Debug\Exercício04.exe

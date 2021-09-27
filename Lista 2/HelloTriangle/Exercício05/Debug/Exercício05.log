@@ -1,0 +1,3 @@
+﻿  Origem.cpp
+C:\Users\fstei\Documents\Listas_PG\Lista02\HelloTriangle\Exercício05\Origem.cpp(292,20): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+  Exercício05.vcxproj -> C:\Users\fstei\Documents\Listas_PG\Lista02\HelloTriangle\Debug\Exercício05.exe
