@@ -1,0 +1,4 @@
+﻿  Origem.cpp
+C:\Users\fstei\Desktop\lista 5\HelloFramework\1f\Origem.cpp(36,25): warning C4305: 'inicializando': truncamento de 'double' para 'float'
+C:\Users\fstei\Desktop\lista 5\HelloFramework\1f\Origem.cpp(105,55): warning C4305: 'argumento': truncamento de 'double' para 'float'
+  1f.vcxproj -> C:\Users\fstei\Desktop\lista 5\HelloFramework\Debug\1f.exe

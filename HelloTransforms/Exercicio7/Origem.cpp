@@ -27,10 +27,11 @@ using namespace std;
 // stb
 #include "stb_image.h"
 
+#include <vector>
 
 // Shaders
 #include "Shader.h"
-
+#include "Object.h"
 
 // Protótipo da função de callback de teclado
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);
@@ -46,6 +47,8 @@ const GLuint WIDTH = 800, HEIGHT = 600;
 const float pi = 3.14159;
 
 int nvertices = 100 + 1 + 1; //+ centro +cópia do 1
+
+using namespace std;
 
 // Função MAIN
 int main()
@@ -86,6 +89,11 @@ int main()
 	cout << "Renderer: " << renderer << endl;
 	cout << "OpenGL version supported " << version << endl;
 
+
+	//glEnable(GL_DEPTH_TEST);
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
 	// Definindo as dimensões da viewport com as mesmas dimensões da janela da aplicação
 	int width, height;
 	
@@ -94,6 +102,44 @@ int main()
 	Shader* shader = new Shader("./shaders/transforms.vs", "./shaders/transforms.fs");
 
 	GLuint texID = loadTexture("./textures/coracao.png");
+	GLuint texID2 = loadTexture("./textures/jojo.jpg");
+
+	Object bg;
+	bg.initialize();
+	bg.setPosition(glm::vec3(400, 300, 0));
+	bg.setDimensions(glm::vec3(800, 600, 1.0));
+	bg.setTexture(texID2);
+	bg.setShader(shader);
+
+	Object obj2;
+	obj2.initialize();
+	obj2.setPosition(glm::vec3(200, 300, 0));
+	obj2.setDimensions(glm::vec3(250, 250, 1.0));
+	obj2.setAngle(glm::radians(45.0f));
+	obj2.setTexture(texID2);
+	obj2.setShader(shader);
+
+	vector <Object> objects;
+
+	float xini = 100;
+	float yini = 100;
+
+	float objW = 100;
+	float objH = 100;
+
+	for (int i = 0; i < 3; i++)
+	{
+		for (int j = 0; j < 4; j++)
+		{
+			Object obj;
+			obj.initialize();
+			obj.setPosition(glm::vec3(xini + j*objW, yini + i*objH, 0));
+			obj.setDimensions(glm::vec3(objW, objH, 1.0));
+			obj.setTexture(texID);
+			obj.setShader(shader);
+			objects.push_back(obj);
+		}
+	}
 
 	// Gerando um buffer simples, com a geometria de um triângulo
 	//GLuint VAO = setupGeometry();
@@ -171,11 +217,26 @@ int main()
 
 
 
-		glActiveTexture(GL_TEXTURE0);
+		/*glActiveTexture(GL_TEXTURE0);
 		glBindTexture(GL_TEXTURE_2D, texID);
 
 		glBindVertexArray(VAO);
-		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);*/
+
+		bg.update();
+		bg.draw();
+
+		//obj2.update();
+		//obj2.draw();
+
+		//float newRot = (float)glfwGetTime;
+		//objects[0].setAngle(newRot);
+
+		for (int i = 0; i < objects.size(); i++)
+		{
+			objects[i].update();
+			objects[i].draw();
+		}
 
 		// Troca os buffers da tela
 		glfwSwapBuffers(window);

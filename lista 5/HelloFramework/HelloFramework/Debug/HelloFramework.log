@@ -1,0 +1,4 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: O diretório intermediário (Debug\) contém arquivos compartilhados de outro projeto (HelloFramework.vcxproj). Isso pode levar a um comportamento incorreto de limpeza e recompilação.
+  Origem.cpp
+C:\Users\fstei\Desktop\lista 5\HelloFramework\HelloFramework\Origem.cpp(37,25): warning C4305: 'inicializando': truncamento de 'double' para 'float'
+  HelloFramework.vcxproj -> C:\Users\fstei\Desktop\lista 5\HelloFramework\Debug\1a.exe
